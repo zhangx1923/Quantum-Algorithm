@@ -1,27 +1,41 @@
 1.Factoring
-
+  Find the prime factorization of an n-bit integer. Shor's algorithm can solve the problem in O(n^3), while the best classical algorithm can
+  complete the task in 2^O(n^(1/3)). The coolest thing about Shor's algorithm is that RSA can be cracked by QC in polynomial time.
+  
 2.Discrete-log
-
+  
+  
 3.Pell's Equation
+
 
 4.Principal Ideal 
 
+
 5.Unit Group 
 
-6.Unit Group 
+
+6.Class Group 
+
 
 7.Gauss Sums 
 
+
 8.Solving Exponential Congruences
+
 
 9.Matrix Elements of Group Representations
 
+
 10.Verifying Matrix Products 
+
 
 11.Subset-sum 
 
+
 12.Decoding 
 
+
 13.Constraint Satisfaction 
+
 
 14.Quantum Cryptanalysis 
