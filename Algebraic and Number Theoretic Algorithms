@@ -1,12 +1,19 @@
 1.Factoring
   Find the prime factorization of an n-bit integer. Shor's algorithm can solve the problem in O(n^3), while the best classical algorithm can
-  complete the task in 2^O(n^(1/3)). The coolest thing about Shor's algorithm is that RSA can be cracked by QC in polynomial time.
+  complete the task in 2^O(n^(1/3)). 
+  The coolest thing about Shor's algorithm is that RSA can be cracked by QC in polynomial time.
+  [1]Polynomial-time algorithms for prime factorization and discrete logarithms on a quantum computer. 
   
 2.Discrete-log
-  
+  Suppose that there are three n-bit numbers a,b,N, where b=(a^s) mod N. This algorithm can find s in poly(n) time by QC, while the best known
+  classical algorithms requires time superpolynomial in n. 
+  Note that this kind of quantum algorithm can cracked elliptic curve cryptography.[2-3]
+  [1]Polynomial-time algorithms for prime factorization and discrete logarithms on a quantum computer. 
+  [2]Quantum cryptanalysis of hidden linear functions. 
+  [3]Shor's discrete logarithm quantum algorithm for elliptic curves. 
   
 3.Pell's Equation
-
+  
 
 4.Principal Ideal 
 
@@ -27,15 +34,60 @@
 
 
 10.Verifying Matrix Products 
-
+  Suppose that A, B, and C are all n*n matrices. This kind of algorithm can vertify whether AB=C and the best known classical algorithm
+  can solve this problem in O(n^2). However, [1] can complete the task in O(n^(7/4)) and [2] can solve it in O(n^(5/3)). The latter is 
+  based on quantum walks.
+  [1] Quantum matrix verification.
+  [2] Quantum verification of matrix products. 
 
 11.Subset-sum 
-
+  The instance of this problem is <S,c>, where S={x_1,...,x_n} and c is the target integer. The major objective of this research is to 
+  determine if there exists a subset of S whose elements total c. The problem is NPC. [1] proposes a quantum algorithm to solve this 
+  problem in time 2^(0.241n), while the best known classical algorithm requires time 2^(0.291n).
+  [1] Quantum algorithms for the subset-sum problem. 
 
 12.Decoding 
-
+  Quantum algorithms can speed up the decoding of convolutional codes[1] and simplex codes[2].
+  [1]A quantum algorithm for Viterbi decoding of classical convolutional codes 
+  [2]A quantum decoding algorithm of the simplex code 
 
 13.Constraint Satisfaction 
-
+  Constraint satisfaction is an important problem in CS and plays an important role in AI. Many of them are NP-hard, such as 3-SAT[1]. If we
+  only want to satisfy as many constraints as possible rather than all of them, the constraint satisfaction problem reduces to combinatorial
+  optimization problems.
+  Compared with the brute force, solving constraint satisfaction problems by Grover algorithm can be quadratically sped up. Note that besides
+  Grover algorithm, there are some classical algorithms run more than quadratically faster than brute force for most constraint satisfaction 
+  problems.
+  However, for 3-SAT, the quantum algorithm[2] runs polynomially faster than the fastest known classical algorithms. And polynomial quantum
+  speedups for some other constraint satisfaction problems are given in [3-4].
+  In classcal algorithms, backtracking is a common way for constraint satisfaction. A general quantum speedup for backtracking is given in [5].
+  [1] See Wiki: Boolean satisfiability problem
+  [2] Quantum Search Algorithms. 
+  [3] Nested quantum search and NP-hard problems. 
+  [4] Faster than classical quantum algorithm for dense formulas of exact satisfiability and occupation problems 
+  [5] Quantum walk speedup of backtracking algorithms
 
 14.Quantum Cryptanalysis 
+  Quantum algorithms for attacking cryptosystems can be classified into three categories：
+  1. The first is quantum algorithms providing polynomial or sub-exponential time attacks on cryptosystems under standard assumptions. For
+  example, [1] breaks certain elliptic curve based cryptosystems in subexponential time;
+  2. Use quantum algorithms to speed up parts of these classical cryptanalytic attacks, such as Grover searching. This kind of algorithm
+  doesn't destory the cryptosystems but may influence the size of keys[2-8];
+  3. Use quantum superposition queries to block ciphers. This kind of algorithm can destory the cryptographic primitives. However, such 
+  superposition queries are unlikely to be feasible in most practical situations.[9-13]
+  [1]Constructing elliptic curve isogenies in quantum subexponential time 
+  [2]Applying Grover's algorithm to AES: quantum resource estimates 
+  [3]Estimating the cost of generic quantum pre-image attacks on SHA-2 and SHA-3 
+  [4]Quantum attacks against iterated block ciphers 
+  [5]Quantum cryptanalysis of hash and claw-free functions 
+  [6]Cost analysis of hash collisions: Will quantum computers make SHARCS obsolete? 
+  [7]Solving the shortest vector problem in lattices faster using quantum search 
+  [8]Quantum Cryptanalysis of NTRU 
+  [9]Quantum differential and linear cryptanalysis
+  [10]Quantum distinguisher between the 3-round Feistel cipher and the random permutation
+  [11]Security on the quantum-type Even-Mansour cipher 
+  [12]A note on quantum related-key attacks
+  [13]Using Simon's algorithm to attack symmetric-key cryptographic primitives 
+
+  
+  
