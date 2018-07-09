@@ -1,5 +1,10 @@
 1. Searching
-
+  Grover's algorithm can find the target elements in a database containing N elements using O(\sqrt{N}) queries[1].
+  Note that the solutions of many NP-complete problems can be accelerated by Grover searching.
+  Amplitude estimation[2], which plays an important role in many quantum algorithms, is a generalization of Grover's algorithm.
+  [1]Quantum mechanics helps in searching for a needle in a haystack. 
+  [2]Quantum amplitude amplification and estimation. 
+  
 2. Abelian Hidden Subgroup
 
 3. Non-Abelian Hidden Subgroup
@@ -7,7 +12,11 @@
 4. Bernstein-Vazirani
 
 5. Deutsch-Jozsa
-
+  There is an oracle whose input is n bits and ouput is one bit. That is, we have 2^n possible inputs. DJ algorithm can use only one query
+  to determine whether the oracle is balanced function or constant function[1], while the classical algorithm requires about O(2^(n-1)+1) queries.
+  It's the first quantum algorithm achieving a speedup over classical computation.
+  [1]Quantum theory, the Church-Turing principle, and the universal quantum computer. 
+  
 6. Formula Evaluation
 
 7. Gradients, Structured Search, and Learning Polynomials
